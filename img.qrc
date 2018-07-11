@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/Image">
+        <file>rsc/14287.jpg</file>
+        <file>rsc/14287 [Converted].png</file>
+        <file>rsc/14287-01.png</file>
+        <file>rsc/auto.xml</file>
+    </qresource>
+</RCC>

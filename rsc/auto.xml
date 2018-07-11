@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="urn:uuid:930ec3a7-799b-4cd7-8cc5-46c3bfa7af3a" chaining="implicit">
+  <commands>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:1a91fa07-39ff-4709-9dcd-99c9cd9afe25">
+      <module name="w32drivers-signature" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="enumerate imports">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="enumerate exports">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Verify Digital Signatures">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="strings">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Preserve Times">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="raw mode">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:ee135edc-ecb6-4311-8ed8-3fff0bb2dabb">
+      <module name="w32drivers-modulelist" version="1.4.46.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:2defb476-1147-432b-9d65-ae0c8b970507">
+      <module name="w32kernel-hookdetection" version="1.4.46.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="idt">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="ssdt_index">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="ssdt_inline">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="drivers">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Verify Digital Signatures">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:5c032ec8-d4dd-47d6-b0c9-2689683f50e4">
+      <module name="w32processes-memory" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="pid" />
+          <param name="process name" />
+          <param name="handles">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="sections">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="ports">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="enumerate imports">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="enumerate exports">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="detect injected dlls">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Verify Digital Signatures">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="MemD5">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="strings">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Preserve Times">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="raw mode">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Content Regex" />
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:d0b32cb5-50d3-418d-af02-bfd2380f9936">
+      <module name="w32system" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="Prevent Hibernation">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:e499fabb-1eb1-4a47-99ba-76c0e62c81b6">
+      <module name="w32processes-API" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="Prevent Hibernation">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:2de1ec0e-d750-4e7a-b0af-4b4c901b7708">
+      <module name="w32processes-handle" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="Prevent Hibernation">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+  </commands>
+</script>

@@ -7,7 +7,7 @@
 QT       += core gui
 QT       += xml
 TARGET = BlackLine
-TEMPLATE = lib
+TEMPLATE = app
 
 
 SOURCES += main.cpp\

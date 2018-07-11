@@ -64,6 +64,8 @@ private slots:
 
     void on_other_CommonPersistenceMechanisms_group_toggled(bool arg1);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::BlackLine *ui;
     QString folderPath;

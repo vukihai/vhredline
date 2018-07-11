@@ -9,33 +9,39 @@
 
 //Mo ra cua so che do tu dong
 void show_AutoMode_Menu( Ui::BlackLine* ui){
-    ui->frame_automode_menu->setVisible(true);
     ui->label_folder_path->setVisible(true);
     ui->next_btn_automode->setVisible(true);
     ui->ram_checkbox_automode->setDisabled(false);
     ui->back_btn_automode->setVisible(false);
     ui->start_btn_automode->setVisible(false);
+    ui->stackedWidget->setVisible(true);
+    ui->autoModeBtn->setStyleSheet("background-color:red;color:white");
+    ui->stackedWidget->setCurrentIndex(0);
     ui->label_folder_path->setText("Bam nut 'Tiep theo' de chon thu muc luu ket qua thu thap duoc");
 }
 //Dong cua so che do tu dong
 void hide_AutoMode_Menu( Ui::BlackLine* ui){
-    ui->frame_automode_menu->setVisible(false);
+    ui->autoModeBtn->setStyleSheet("");
     ui->label_folder_path->setVisible(false);
+    ui->stackedWidget->setVisible(false);
 }
 //Mo ra cua so che do thu cong
 void show_HandMode_Menu( Ui::BlackLine* ui){
-    ui->frame_handmode_menu->setVisible(true);
     ui->label_folder_path->setVisible(true);
     ui->next_btn_handmode->setVisible(true);
     ui->tab_hand_mode_widget->setDisabled(false);
     ui->back_btn_handmode->setVisible(false);
     ui->start_btn_handmode->setVisible(false);
+    ui->stackedWidget->setVisible(true);
+    ui->handModeBtn->setStyleSheet("background-color:red;color:white");
+    ui->stackedWidget->setCurrentIndex(1);
     ui->label_folder_path->setText("Bam nut 'Tiep theo' de chon thu muc luu ket qua thu thap duoc");
 }
 //Dong che do thu cong
 void hide_HandMode_Menu( Ui::BlackLine* ui){
-    ui->frame_handmode_menu->setVisible(false);
+    ui->handModeBtn->setStyleSheet("");
     ui->label_folder_path->setVisible(false);
+    ui->stackedWidget->setVisible(false);
 }
 //Check or uncheck tat ca cac checkbox trong group
 void revert_checkBox(QGroupBox* group, bool check){
@@ -199,51 +205,34 @@ QString BlackLine::print_data_checkbox(QWidget*w){
 
 ///////
 //Cac ham duoi day thuc hien khi click vao checkbox dai dien cho 1 group
-void BlackLine::on_memory_ProcessListing_group_toggled(bool arg1)
-{
+void BlackLine::on_memory_ProcessListing_group_toggled(bool arg1){
     revert_checkBox(this->ui->memory_ProcessListing_group,arg1);
 }
-
-void BlackLine::on_system_SystemInfomation_group_toggled(bool arg1)
-{
+void BlackLine::on_system_SystemInfomation_group_toggled(bool arg1){
     revert_checkBox(this->ui->system_SystemInfomation_group,arg1);
 }
-
-void BlackLine::on_memory_HookDetection_toggled(bool arg1)
-{
+void BlackLine::on_memory_HookDetection_toggled(bool arg1){
     revert_checkBox(this->ui->memory_HookDetection,arg1);
 }
-
-void BlackLine::on_memory_DriversEnumeration_group_toggled(bool arg1)
-{
+void BlackLine::on_memory_DriversEnumeration_group_toggled(bool arg1){
     revert_checkBox(this->ui->memory_DriversEnumeration_group,arg1);
 }
-
-void BlackLine::on_network_BrowserHistory_group_toggled(bool arg1)
-{
+void BlackLine::on_network_BrowserHistory_group_toggled(bool arg1){
     revert_checkBox(this->ui->network_BrowserHistory_group,arg1);
 }
-
-void BlackLine::on_disk_FileEnumeration_group_toggled(bool arg1)
-{
+void BlackLine::on_disk_FileEnumeration_group_toggled(bool arg1){
     revert_checkBox(this->ui->disk_FileEnumeration_group,arg1);
 }
-void BlackLine::on_disk_DiskEnumeration_group_toggled(bool arg1)
-{
+void BlackLine::on_disk_DiskEnumeration_group_toggled(bool arg1){
     revert_checkBox(this->ui->disk_DiskEnumeration_group,arg1);
 }
-void BlackLine::on_other_Tasks_group_toggled(bool arg1)
-{
+void BlackLine::on_other_Tasks_group_toggled(bool arg1){
     revert_checkBox(this->ui->other_Tasks_group,arg1);
 }
-
-void BlackLine::on_other_Services_group_toggled(bool arg1)
-{
+void BlackLine::on_other_Services_group_toggled(bool arg1){
     revert_checkBox(this->ui->other_Services_group,arg1);
 }
-
-void BlackLine::on_other_CommonPersistenceMechanisms_group_toggled(bool arg1)
-{
+void BlackLine::on_other_CommonPersistenceMechanisms_group_toggled(bool arg1){
     revert_checkBox(this->ui->other_CommonPersistenceMechanisms_group,arg1);
 }
 
@@ -393,3 +382,8 @@ void BlackLine::on_cancel_btn_clicked()
 //void BlackLine::runXagtSign(){
 
 //}
+
+void BlackLine::on_pushButton_clicked()
+{
+
+}

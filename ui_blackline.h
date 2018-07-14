@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'blackline.ui'
 **
-** Created: Wed Jul 11 22:39:05 2018
+** Created: Sat Jul 14 12:15:30 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -48,9 +48,9 @@ public:
     QHBoxLayout *horizontalLayout;
     QPushButton *cancel_btn;
     QPushButton *finish_btn;
-    QPushButton *pushButton;
+    QPushButton *standardModeBtn;
     QStackedWidget *stackedWidget;
-    QWidget *page;
+    QWidget *page_automode;
     QFrame *frame_automode_menu;
     QPushButton *next_btn_automode;
     QCheckBox *ram_checkbox_automode;
@@ -58,7 +58,7 @@ public:
     QPushButton *back_btn_automode;
     QPushButton *start_btn_automode;
     QTextBrowser *textBrowser;
-    QWidget *page_2;
+    QWidget *page_handmode;
     QFrame *frame_handmode_menu;
     QTabWidget *tab_hand_mode_widget;
     QWidget *tab_memory;
@@ -176,7 +176,7 @@ public:
     QPushButton *next_btn_handmode;
     QPushButton *start_btn_handmode;
     QPushButton *back_btn_handmode;
-    QWidget *page_3;
+    QWidget *page_standard_uet;
     QFrame *frame_handmode_menu_2;
     QTabWidget *tab_hand_mode_widget_2;
     QWidget *tab_memory_2;
@@ -186,18 +186,18 @@ public:
     QGridLayout *gridLayout_18;
     QGroupBox *memory_ProcessListing_group_2;
     QGridLayout *gridLayout_19;
-    QCheckBox *checkBox_17;
-    QCheckBox *checkBox_18;
-    QCheckBox *checkBox_19;
-    QCheckBox *checkBox_20;
+    QCheckBox *checkBox_90;
     QCheckBox *checkBox_21;
     QCheckBox *checkBox_22;
+    QCheckBox *checkBox_18;
     QCheckBox *checkBox_46;
-    QCheckBox *checkBox_55;
     QCheckBox *checkBox_56;
-    QCheckBox *checkBox_57;
     QCheckBox *checkBox_58;
-    QCheckBox *checkBox_90;
+    QCheckBox *checkBox_19;
+    QCheckBox *checkBox_55;
+    QCheckBox *checkBox_17;
+    QCheckBox *checkBox_149;
+    QCheckBox *checkBox_20;
     QGroupBox *memory_DriversEnumeration_group_2;
     QGridLayout *gridLayout_20;
     QCheckBox *checkBox_24;
@@ -290,12 +290,11 @@ public:
     QCheckBox *checkBox_146;
     QCheckBox *checkBox_147;
     QCheckBox *checkBox_148;
-    QPushButton *close_handmode_menu_btn_2;
+    QPushButton *close_standard_menu_btn;
     QPushButton *next_btn_handmode_2;
     QPushButton *start_btn_handmode_2;
     QPushButton *back_btn_handmode_2;
     QLabel *label_folder_path;
-    QLabel *label;
 
     void setupUi(QMainWindow *BlackLine)
     {
@@ -325,7 +324,7 @@ public:
     autoModeBtn = new QPushButton(centralWidget);
     autoModeBtn->setObjectName(QString::fromUtf8("autoModeBtn"));
     autoModeBtn->setEnabled(true);
-    autoModeBtn->setGeometry(QRect(10, 180, 331, 101));
+    autoModeBtn->setGeometry(QRect(10, 30, 331, 111));
     QFont font;
     font.setPointSize(18);
     autoModeBtn->setFont(font);
@@ -335,7 +334,7 @@ public:
     autoModeBtn->setStyleSheet(QString::fromUtf8(" padding-left:-55;"));
     handModeBtn = new QPushButton(centralWidget);
     handModeBtn->setObjectName(QString::fromUtf8("handModeBtn"));
-    handModeBtn->setGeometry(QRect(10, 460, 331, 101));
+    handModeBtn->setGeometry(QRect(10, 360, 331, 221));
     handModeBtn->setFont(font);
     handModeBtn->setCursor(QCursor(Qt::PointingHandCursor));
     handModeBtn->setStyleSheet(QString::fromUtf8("padding-left:-15;"));
@@ -395,23 +394,23 @@ public:
 
     gridLayout_16->addLayout(horizontalLayout, 2, 0, 2, 1);
 
-    pushButton = new QPushButton(centralWidget);
-    pushButton->setObjectName(QString::fromUtf8("pushButton"));
-    pushButton->setGeometry(QRect(10, 320, 331, 101));
+    standardModeBtn = new QPushButton(centralWidget);
+    standardModeBtn->setObjectName(QString::fromUtf8("standardModeBtn"));
+    standardModeBtn->setGeometry(QRect(10, 170, 331, 161));
     QSizePolicy sizePolicy1(QSizePolicy::Maximum, QSizePolicy::Fixed);
     sizePolicy1.setHorizontalStretch(0);
     sizePolicy1.setVerticalStretch(0);
-    sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
-    pushButton->setSizePolicy(sizePolicy1);
-    pushButton->setFont(font);
-    pushButton->setCursor(QCursor(Qt::PointingHandCursor));
-    pushButton->setMouseTracking(true);
+    sizePolicy1.setHeightForWidth(standardModeBtn->sizePolicy().hasHeightForWidth());
+    standardModeBtn->setSizePolicy(sizePolicy1);
+    standardModeBtn->setFont(font);
+    standardModeBtn->setCursor(QCursor(Qt::PointingHandCursor));
+    standardModeBtn->setMouseTracking(true);
     stackedWidget = new QStackedWidget(centralWidget);
     stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-    stackedWidget->setGeometry(QRect(370, 10, 611, 561));
-    page = new QWidget();
-    page->setObjectName(QString::fromUtf8("page"));
-    frame_automode_menu = new QFrame(page);
+    stackedWidget->setGeometry(QRect(370, 10, 621, 581));
+    page_automode = new QWidget();
+    page_automode->setObjectName(QString::fromUtf8("page_automode"));
+    frame_automode_menu = new QFrame(page_automode);
     frame_automode_menu->setObjectName(QString::fromUtf8("frame_automode_menu"));
     frame_automode_menu->setGeometry(QRect(0, 0, 611, 571));
     frame_automode_menu->setAutoFillBackground(true);
@@ -419,7 +418,7 @@ public:
     frame_automode_menu->setFrameShadow(QFrame::Raised);
     next_btn_automode = new QPushButton(frame_automode_menu);
     next_btn_automode->setObjectName(QString::fromUtf8("next_btn_automode"));
-    next_btn_automode->setGeometry(QRect(470, 520, 111, 41));
+    next_btn_automode->setGeometry(QRect(480, 520, 111, 41));
     ram_checkbox_automode = new QCheckBox(frame_automode_menu);
     ram_checkbox_automode->setObjectName(QString::fromUtf8("ram_checkbox_automode"));
     ram_checkbox_automode->setGeometry(QRect(20, 480, 191, 21));
@@ -433,10 +432,10 @@ public:
     close_automode_menu_btn->setGeometry(QRect(590, 0, 20, 16));
     back_btn_automode = new QPushButton(frame_automode_menu);
     back_btn_automode->setObjectName(QString::fromUtf8("back_btn_automode"));
-    back_btn_automode->setGeometry(QRect(370, 520, 91, 41));
+    back_btn_automode->setGeometry(QRect(380, 520, 91, 41));
     start_btn_automode = new QPushButton(frame_automode_menu);
     start_btn_automode->setObjectName(QString::fromUtf8("start_btn_automode"));
-    start_btn_automode->setGeometry(QRect(470, 520, 111, 41));
+    start_btn_automode->setGeometry(QRect(480, 520, 111, 41));
     textBrowser = new QTextBrowser(frame_automode_menu);
     textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
     textBrowser->setGeometry(QRect(20, 30, 571, 441));
@@ -449,10 +448,10 @@ public:
     start_btn_automode->raise();
     textBrowser->raise();
     next_btn_automode->raise();
-    stackedWidget->addWidget(page);
-    page_2 = new QWidget();
-    page_2->setObjectName(QString::fromUtf8("page_2"));
-    frame_handmode_menu = new QFrame(page_2);
+    stackedWidget->addWidget(page_automode);
+    page_handmode = new QWidget();
+    page_handmode->setObjectName(QString::fromUtf8("page_handmode"));
+    frame_handmode_menu = new QFrame(page_handmode);
     frame_handmode_menu->setObjectName(QString::fromUtf8("frame_handmode_menu"));
     frame_handmode_menu->setGeometry(QRect(0, 0, 611, 571));
     frame_handmode_menu->setAutoFillBackground(true);
@@ -743,7 +742,7 @@ public:
     scrollArea_2->setWidgetResizable(true);
     scrollAreaWidgetContents_2 = new QWidget();
     scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
-    scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 532, 635));
+    scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 352, 635));
     gridLayout_7 = new QGridLayout(scrollAreaWidgetContents_2);
     gridLayout_7->setSpacing(6);
     gridLayout_7->setMargin(11);
@@ -880,7 +879,7 @@ public:
     scrollArea_3->setWidgetResizable(true);
     scrollAreaWidgetContents_3 = new QWidget();
     scrollAreaWidgetContents_3->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_3"));
-    scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 532, 805));
+    scrollAreaWidgetContents_3->setGeometry(QRect(0, 0, 391, 805));
     gridLayout_14 = new QGridLayout(scrollAreaWidgetContents_3);
     gridLayout_14->setSpacing(6);
     gridLayout_14->setMargin(11);
@@ -1024,10 +1023,10 @@ public:
     close_handmode_menu_btn->raise();
     next_btn_handmode->raise();
     back_btn_handmode->raise();
-    stackedWidget->addWidget(page_2);
-    page_3 = new QWidget();
-    page_3->setObjectName(QString::fromUtf8("page_3"));
-    frame_handmode_menu_2 = new QFrame(page_3);
+    stackedWidget->addWidget(page_handmode);
+    page_standard_uet = new QWidget();
+    page_standard_uet->setObjectName(QString::fromUtf8("page_standard_uet"));
+    frame_handmode_menu_2 = new QFrame(page_standard_uet);
     frame_handmode_menu_2->setObjectName(QString::fromUtf8("frame_handmode_menu_2"));
     frame_handmode_menu_2->setGeometry(QRect(0, 0, 611, 571));
     frame_handmode_menu_2->setAutoFillBackground(true);
@@ -1059,70 +1058,79 @@ public:
     memory_ProcessListing_group_2->setFont(font2);
     memory_ProcessListing_group_2->setFlat(true);
     memory_ProcessListing_group_2->setCheckable(true);
-    memory_ProcessListing_group_2->setChecked(false);
+    memory_ProcessListing_group_2->setChecked(true);
     gridLayout_19 = new QGridLayout(memory_ProcessListing_group_2);
     gridLayout_19->setSpacing(6);
     gridLayout_19->setMargin(11);
     gridLayout_19->setObjectName(QString::fromUtf8("gridLayout_19"));
-    checkBox_17 = new QCheckBox(memory_ProcessListing_group_2);
-    checkBox_17->setObjectName(QString::fromUtf8("checkBox_17"));
+    checkBox_90 = new QCheckBox(memory_ProcessListing_group_2);
+    checkBox_90->setObjectName(QString::fromUtf8("checkBox_90"));
 
-    gridLayout_19->addWidget(checkBox_17, 0, 0, 1, 1);
-
-    checkBox_18 = new QCheckBox(memory_ProcessListing_group_2);
-    checkBox_18->setObjectName(QString::fromUtf8("checkBox_18"));
-
-    gridLayout_19->addWidget(checkBox_18, 1, 0, 1, 1);
-
-    checkBox_19 = new QCheckBox(memory_ProcessListing_group_2);
-    checkBox_19->setObjectName(QString::fromUtf8("checkBox_19"));
-
-    gridLayout_19->addWidget(checkBox_19, 2, 0, 1, 1);
-
-    checkBox_20 = new QCheckBox(memory_ProcessListing_group_2);
-    checkBox_20->setObjectName(QString::fromUtf8("checkBox_20"));
-
-    gridLayout_19->addWidget(checkBox_20, 3, 0, 1, 1);
+    gridLayout_19->addWidget(checkBox_90, 13, 0, 1, 1);
 
     checkBox_21 = new QCheckBox(memory_ProcessListing_group_2);
     checkBox_21->setObjectName(QString::fromUtf8("checkBox_21"));
+    checkBox_21->setChecked(true);
 
-    gridLayout_19->addWidget(checkBox_21, 4, 0, 1, 1);
+    gridLayout_19->addWidget(checkBox_21, 12, 0, 1, 1);
 
     checkBox_22 = new QCheckBox(memory_ProcessListing_group_2);
     checkBox_22->setObjectName(QString::fromUtf8("checkBox_22"));
 
-    gridLayout_19->addWidget(checkBox_22, 5, 0, 1, 1);
+    gridLayout_19->addWidget(checkBox_22, 10, 0, 1, 1);
+
+    checkBox_18 = new QCheckBox(memory_ProcessListing_group_2);
+    checkBox_18->setObjectName(QString::fromUtf8("checkBox_18"));
+    checkBox_18->setChecked(true);
+
+    gridLayout_19->addWidget(checkBox_18, 8, 0, 1, 1);
 
     checkBox_46 = new QCheckBox(memory_ProcessListing_group_2);
     checkBox_46->setObjectName(QString::fromUtf8("checkBox_46"));
+    checkBox_46->setChecked(true);
 
     gridLayout_19->addWidget(checkBox_46, 6, 0, 1, 1);
 
-    checkBox_55 = new QCheckBox(memory_ProcessListing_group_2);
-    checkBox_55->setObjectName(QString::fromUtf8("checkBox_55"));
-
-    gridLayout_19->addWidget(checkBox_55, 7, 0, 1, 1);
-
     checkBox_56 = new QCheckBox(memory_ProcessListing_group_2);
     checkBox_56->setObjectName(QString::fromUtf8("checkBox_56"));
+    checkBox_56->setChecked(true);
 
-    gridLayout_19->addWidget(checkBox_56, 8, 0, 1, 1);
-
-    checkBox_57 = new QCheckBox(memory_ProcessListing_group_2);
-    checkBox_57->setObjectName(QString::fromUtf8("checkBox_57"));
-
-    gridLayout_19->addWidget(checkBox_57, 9, 0, 1, 1);
+    gridLayout_19->addWidget(checkBox_56, 4, 0, 1, 1);
 
     checkBox_58 = new QCheckBox(memory_ProcessListing_group_2);
     checkBox_58->setObjectName(QString::fromUtf8("checkBox_58"));
 
-    gridLayout_19->addWidget(checkBox_58, 10, 0, 1, 1);
+    gridLayout_19->addWidget(checkBox_58, 2, 0, 1, 1);
 
-    checkBox_90 = new QCheckBox(memory_ProcessListing_group_2);
-    checkBox_90->setObjectName(QString::fromUtf8("checkBox_90"));
+    checkBox_19 = new QCheckBox(memory_ProcessListing_group_2);
+    checkBox_19->setObjectName(QString::fromUtf8("checkBox_19"));
+    checkBox_19->setChecked(true);
 
-    gridLayout_19->addWidget(checkBox_90, 11, 0, 1, 1);
+    gridLayout_19->addWidget(checkBox_19, 3, 0, 1, 1);
+
+    checkBox_55 = new QCheckBox(memory_ProcessListing_group_2);
+    checkBox_55->setObjectName(QString::fromUtf8("checkBox_55"));
+
+    gridLayout_19->addWidget(checkBox_55, 5, 0, 1, 1);
+
+    checkBox_17 = new QCheckBox(memory_ProcessListing_group_2);
+    checkBox_17->setObjectName(QString::fromUtf8("checkBox_17"));
+    checkBox_17->setChecked(true);
+    checkBox_17->setTristate(false);
+
+    gridLayout_19->addWidget(checkBox_17, 7, 0, 1, 1);
+
+    checkBox_149 = new QCheckBox(memory_ProcessListing_group_2);
+    checkBox_149->setObjectName(QString::fromUtf8("checkBox_149"));
+    checkBox_149->setChecked(true);
+
+    gridLayout_19->addWidget(checkBox_149, 9, 0, 1, 1);
+
+    checkBox_20 = new QCheckBox(memory_ProcessListing_group_2);
+    checkBox_20->setObjectName(QString::fromUtf8("checkBox_20"));
+    checkBox_20->setChecked(true);
+
+    gridLayout_19->addWidget(checkBox_20, 11, 0, 1, 1);
 
 
     gridLayout_18->addWidget(memory_ProcessListing_group_2, 1, 0, 1, 2);
@@ -1132,23 +1140,26 @@ public:
     memory_DriversEnumeration_group_2->setFont(font2);
     memory_DriversEnumeration_group_2->setFlat(true);
     memory_DriversEnumeration_group_2->setCheckable(true);
-    memory_DriversEnumeration_group_2->setChecked(false);
+    memory_DriversEnumeration_group_2->setChecked(true);
     gridLayout_20 = new QGridLayout(memory_DriversEnumeration_group_2);
     gridLayout_20->setSpacing(6);
     gridLayout_20->setMargin(11);
     gridLayout_20->setObjectName(QString::fromUtf8("gridLayout_20"));
     checkBox_24 = new QCheckBox(memory_DriversEnumeration_group_2);
     checkBox_24->setObjectName(QString::fromUtf8("checkBox_24"));
+    checkBox_24->setChecked(true);
 
     gridLayout_20->addWidget(checkBox_24, 0, 0, 1, 1);
 
     checkBox_25 = new QCheckBox(memory_DriversEnumeration_group_2);
     checkBox_25->setObjectName(QString::fromUtf8("checkBox_25"));
+    checkBox_25->setChecked(true);
 
     gridLayout_20->addWidget(checkBox_25, 1, 0, 1, 1);
 
     checkBox_26 = new QCheckBox(memory_DriversEnumeration_group_2);
     checkBox_26->setObjectName(QString::fromUtf8("checkBox_26"));
+    checkBox_26->setChecked(true);
 
     gridLayout_20->addWidget(checkBox_26, 2, 0, 1, 1);
 
@@ -1159,6 +1170,7 @@ public:
 
     checkBox_28 = new QCheckBox(memory_DriversEnumeration_group_2);
     checkBox_28->setObjectName(QString::fromUtf8("checkBox_28"));
+    checkBox_28->setChecked(true);
 
     gridLayout_20->addWidget(checkBox_28, 4, 0, 1, 1);
 
@@ -1186,33 +1198,38 @@ public:
     memory_HookDetection_2->setFont(font2);
     memory_HookDetection_2->setFlat(true);
     memory_HookDetection_2->setCheckable(true);
-    memory_HookDetection_2->setChecked(false);
+    memory_HookDetection_2->setChecked(true);
     gridLayout_21 = new QGridLayout(memory_HookDetection_2);
     gridLayout_21->setSpacing(6);
     gridLayout_21->setMargin(11);
     gridLayout_21->setObjectName(QString::fromUtf8("gridLayout_21"));
     checkBox_100 = new QCheckBox(memory_HookDetection_2);
     checkBox_100->setObjectName(QString::fromUtf8("checkBox_100"));
+    checkBox_100->setChecked(true);
 
     gridLayout_21->addWidget(checkBox_100, 0, 0, 1, 1);
 
     checkBox_101 = new QCheckBox(memory_HookDetection_2);
     checkBox_101->setObjectName(QString::fromUtf8("checkBox_101"));
+    checkBox_101->setChecked(true);
 
     gridLayout_21->addWidget(checkBox_101, 1, 0, 1, 1);
 
     checkBox_102 = new QCheckBox(memory_HookDetection_2);
     checkBox_102->setObjectName(QString::fromUtf8("checkBox_102"));
+    checkBox_102->setChecked(true);
 
     gridLayout_21->addWidget(checkBox_102, 2, 0, 1, 1);
 
     checkBox_103 = new QCheckBox(memory_HookDetection_2);
     checkBox_103->setObjectName(QString::fromUtf8("checkBox_103"));
+    checkBox_103->setChecked(true);
 
     gridLayout_21->addWidget(checkBox_103, 3, 0, 1, 1);
 
     checkBox_91 = new QCheckBox(memory_HookDetection_2);
     checkBox_91->setObjectName(QString::fromUtf8("checkBox_91"));
+    checkBox_91->setChecked(true);
 
     gridLayout_21->addWidget(checkBox_91, 4, 0, 1, 1);
 
@@ -1233,30 +1250,37 @@ public:
     system_SystemInfomation_group_2->setFont(font2);
     system_SystemInfomation_group_2->setFlat(true);
     system_SystemInfomation_group_2->setCheckable(true);
-    system_SystemInfomation_group_2->setChecked(false);
+    system_SystemInfomation_group_2->setChecked(true);
     checkBox_92 = new QCheckBox(system_SystemInfomation_group_2);
     checkBox_92->setObjectName(QString::fromUtf8("checkBox_92"));
-    checkBox_92->setGeometry(QRect(20, 30, 242, 23));
+    checkBox_92->setGeometry(QRect(10, 30, 242, 23));
+    checkBox_92->setChecked(true);
     checkBox_93 = new QCheckBox(system_SystemInfomation_group_2);
     checkBox_93->setObjectName(QString::fromUtf8("checkBox_93"));
-    checkBox_93->setGeometry(QRect(20, 60, 260, 23));
+    checkBox_93->setGeometry(QRect(10, 60, 260, 23));
+    checkBox_93->setChecked(true);
     checkBox_94 = new QCheckBox(system_SystemInfomation_group_2);
     checkBox_94->setObjectName(QString::fromUtf8("checkBox_94"));
-    checkBox_94->setGeometry(QRect(20, 90, 228, 23));
+    checkBox_94->setGeometry(QRect(10, 90, 228, 23));
+    checkBox_94->setChecked(true);
     checkBox_95 = new QCheckBox(system_SystemInfomation_group_2);
     checkBox_95->setObjectName(QString::fromUtf8("checkBox_95"));
-    checkBox_95->setGeometry(QRect(20, 120, 134, 23));
+    checkBox_95->setGeometry(QRect(10, 120, 134, 23));
+    checkBox_95->setChecked(true);
     checkBox_104 = new QCheckBox(system_SystemInfomation_group_2);
     checkBox_104->setObjectName(QString::fromUtf8("checkBox_104"));
-    checkBox_104->setGeometry(QRect(20, 150, 155, 23));
+    checkBox_104->setGeometry(QRect(10, 150, 155, 23));
+    checkBox_104->setChecked(true);
     system_EventLogs_group_2 = new QCheckBox(tab_system_2);
     system_EventLogs_group_2->setObjectName(QString::fromUtf8("system_EventLogs_group_2"));
     system_EventLogs_group_2->setGeometry(QRect(10, 230, 109, 23));
     system_EventLogs_group_2->setFont(font2);
+    system_EventLogs_group_2->setChecked(true);
     system_RegistryEnumeration_group_2 = new QCheckBox(tab_system_2);
     system_RegistryEnumeration_group_2->setObjectName(QString::fromUtf8("system_RegistryEnumeration_group_2"));
     system_RegistryEnumeration_group_2->setGeometry(QRect(10, 200, 190, 23));
     system_RegistryEnumeration_group_2->setFont(font2);
+    system_RegistryEnumeration_group_2->setChecked(true);
     tab_hand_mode_widget_2->addTab(tab_system_2, QString());
     tab_network_2 = new QWidget();
     tab_network_2->setObjectName(QString::fromUtf8("tab_network_2"));
@@ -1265,43 +1289,52 @@ public:
     checkBox_105->setObjectName(QString::fromUtf8("checkBox_105"));
     checkBox_105->setGeometry(QRect(20, 20, 161, 21));
     checkBox_105->setFont(font2);
+    checkBox_105->setChecked(true);
     checkBox_106 = new QCheckBox(tab_network_2);
     checkBox_106->setObjectName(QString::fromUtf8("checkBox_106"));
     checkBox_106->setGeometry(QRect(20, 50, 161, 21));
     checkBox_106->setFont(font2);
+    checkBox_106->setChecked(true);
     checkBox_107 = new QCheckBox(tab_network_2);
     checkBox_107->setObjectName(QString::fromUtf8("checkBox_107"));
     checkBox_107->setGeometry(QRect(20, 80, 121, 21));
     checkBox_107->setFont(font2);
+    checkBox_107->setChecked(true);
     checkBox_108 = new QCheckBox(tab_network_2);
     checkBox_108->setObjectName(QString::fromUtf8("checkBox_108"));
     checkBox_108->setGeometry(QRect(20, 110, 121, 21));
     checkBox_108->setFont(font2);
+    checkBox_108->setChecked(true);
     network_BrowserHistory_group_2 = new QGroupBox(tab_network_2);
     network_BrowserHistory_group_2->setObjectName(QString::fromUtf8("network_BrowserHistory_group_2"));
     network_BrowserHistory_group_2->setGeometry(QRect(20, 140, 481, 231));
     network_BrowserHistory_group_2->setFont(font2);
     network_BrowserHistory_group_2->setFlat(true);
     network_BrowserHistory_group_2->setCheckable(true);
-    network_BrowserHistory_group_2->setChecked(false);
+    network_BrowserHistory_group_2->setChecked(true);
     checkBox_109 = new QCheckBox(network_BrowserHistory_group_2);
     checkBox_109->setObjectName(QString::fromUtf8("checkBox_109"));
-    checkBox_109->setGeometry(QRect(30, 30, 82, 21));
+    checkBox_109->setGeometry(QRect(20, 30, 82, 21));
+    checkBox_109->setChecked(true);
     checkBox_110 = new QCheckBox(network_BrowserHistory_group_2);
     checkBox_110->setObjectName(QString::fromUtf8("checkBox_110"));
-    checkBox_110->setGeometry(QRect(30, 60, 111, 21));
+    checkBox_110->setGeometry(QRect(20, 60, 111, 21));
+    checkBox_110->setChecked(true);
     checkBox_111 = new QCheckBox(network_BrowserHistory_group_2);
     checkBox_111->setObjectName(QString::fromUtf8("checkBox_111"));
-    checkBox_111->setGeometry(QRect(30, 90, 191, 21));
+    checkBox_111->setGeometry(QRect(20, 90, 191, 21));
+    checkBox_111->setChecked(false);
     checkBox_112 = new QCheckBox(network_BrowserHistory_group_2);
     checkBox_112->setObjectName(QString::fromUtf8("checkBox_112"));
-    checkBox_112->setGeometry(QRect(30, 120, 121, 21));
+    checkBox_112->setGeometry(QRect(20, 120, 121, 21));
+    checkBox_112->setChecked(true);
     checkBox_113 = new QCheckBox(network_BrowserHistory_group_2);
     checkBox_113->setObjectName(QString::fromUtf8("checkBox_113"));
-    checkBox_113->setGeometry(QRect(30, 150, 161, 21));
+    checkBox_113->setGeometry(QRect(20, 150, 161, 21));
+    checkBox_113->setChecked(true);
     checkBox_114 = new QCheckBox(network_BrowserHistory_group_2);
     checkBox_114->setObjectName(QString::fromUtf8("checkBox_114"));
-    checkBox_114->setGeometry(QRect(30, 180, 241, 21));
+    checkBox_114->setGeometry(QRect(20, 180, 241, 21));
     tab_hand_mode_widget_2->addTab(tab_network_2, QString());
     tab_disk_2 = new QWidget();
     tab_disk_2->setObjectName(QString::fromUtf8("tab_disk_2"));
@@ -1316,7 +1349,7 @@ public:
     scrollArea_5->setWidgetResizable(true);
     scrollAreaWidgetContents_5 = new QWidget();
     scrollAreaWidgetContents_5->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_5"));
-    scrollAreaWidgetContents_5->setGeometry(QRect(0, 0, 532, 635));
+    scrollAreaWidgetContents_5->setGeometry(QRect(0, -176, 532, 635));
     gridLayout_23 = new QGridLayout(scrollAreaWidgetContents_5);
     gridLayout_23->setSpacing(6);
     gridLayout_23->setMargin(11);
@@ -1326,68 +1359,80 @@ public:
     disk_FileEnumeration_group_2->setFont(font2);
     disk_FileEnumeration_group_2->setFlat(true);
     disk_FileEnumeration_group_2->setCheckable(true);
-    disk_FileEnumeration_group_2->setChecked(false);
+    disk_FileEnumeration_group_2->setChecked(true);
     gridLayout_24 = new QGridLayout(disk_FileEnumeration_group_2);
     gridLayout_24->setSpacing(6);
     gridLayout_24->setMargin(11);
     gridLayout_24->setObjectName(QString::fromUtf8("gridLayout_24"));
     checkBox_115 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_115->setObjectName(QString::fromUtf8("checkBox_115"));
+    checkBox_115->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_115, 0, 0, 1, 1);
 
     checkBox_116 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_116->setObjectName(QString::fromUtf8("checkBox_116"));
+    checkBox_116->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_116, 1, 0, 1, 1);
 
     checkBox_117 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_117->setObjectName(QString::fromUtf8("checkBox_117"));
+    checkBox_117->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_117, 2, 0, 1, 1);
 
     checkBox_118 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_118->setObjectName(QString::fromUtf8("checkBox_118"));
+    checkBox_118->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_118, 3, 0, 1, 1);
 
     checkBox_119 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_119->setObjectName(QString::fromUtf8("checkBox_119"));
+    checkBox_119->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_119, 4, 0, 1, 1);
 
     checkBox_120 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_120->setObjectName(QString::fromUtf8("checkBox_120"));
+    checkBox_120->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_120, 5, 0, 1, 1);
 
     checkBox_121 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_121->setObjectName(QString::fromUtf8("checkBox_121"));
+    checkBox_121->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_121, 6, 0, 1, 1);
 
     checkBox_122 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_122->setObjectName(QString::fromUtf8("checkBox_122"));
+    checkBox_122->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_122, 7, 0, 1, 1);
 
     checkBox_123 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_123->setObjectName(QString::fromUtf8("checkBox_123"));
+    checkBox_123->setChecked(false);
 
     gridLayout_24->addWidget(checkBox_123, 8, 0, 1, 1);
 
     checkBox_124 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_124->setObjectName(QString::fromUtf8("checkBox_124"));
+    checkBox_124->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_124, 9, 0, 1, 1);
 
     checkBox_125 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_125->setObjectName(QString::fromUtf8("checkBox_125"));
+    checkBox_125->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_125, 10, 0, 1, 1);
 
     checkBox_126 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_126->setObjectName(QString::fromUtf8("checkBox_126"));
+    checkBox_126->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_126, 11, 0, 1, 1);
 
@@ -1398,11 +1443,13 @@ public:
 
     checkBox_128 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_128->setObjectName(QString::fromUtf8("checkBox_128"));
+    checkBox_128->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_128, 13, 0, 1, 1);
 
     checkBox_129 = new QCheckBox(disk_FileEnumeration_group_2);
     checkBox_129->setObjectName(QString::fromUtf8("checkBox_129"));
+    checkBox_129->setChecked(true);
 
     gridLayout_24->addWidget(checkBox_129, 14, 0, 1, 1);
 
@@ -1419,18 +1466,20 @@ public:
     disk_DiskEnumeration_group_2->setFont(font2);
     disk_DiskEnumeration_group_2->setFlat(true);
     disk_DiskEnumeration_group_2->setCheckable(true);
-    disk_DiskEnumeration_group_2->setChecked(false);
+    disk_DiskEnumeration_group_2->setChecked(true);
     gridLayout_25 = new QGridLayout(disk_DiskEnumeration_group_2);
     gridLayout_25->setSpacing(6);
     gridLayout_25->setMargin(11);
     gridLayout_25->setObjectName(QString::fromUtf8("gridLayout_25"));
     checkBox_131 = new QCheckBox(disk_DiskEnumeration_group_2);
     checkBox_131->setObjectName(QString::fromUtf8("checkBox_131"));
+    checkBox_131->setChecked(true);
 
     gridLayout_25->addWidget(checkBox_131, 0, 0, 1, 1);
 
     checkBox_132 = new QCheckBox(disk_DiskEnumeration_group_2);
     checkBox_132->setObjectName(QString::fromUtf8("checkBox_132"));
+    checkBox_132->setChecked(true);
 
     gridLayout_25->addWidget(checkBox_132, 1, 0, 1, 1);
 
@@ -1453,22 +1502,24 @@ public:
     scrollArea_6->setWidgetResizable(true);
     scrollAreaWidgetContents_6 = new QWidget();
     scrollAreaWidgetContents_6->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_6"));
-    scrollAreaWidgetContents_6->setGeometry(QRect(0, 0, 532, 805));
+    scrollAreaWidgetContents_6->setGeometry(QRect(0, -156, 532, 615));
     gridLayout_27 = new QGridLayout(scrollAreaWidgetContents_6);
     gridLayout_27->setSpacing(6);
     gridLayout_27->setMargin(11);
     gridLayout_27->setObjectName(QString::fromUtf8("gridLayout_27"));
     other_Services_group_2 = new QGroupBox(scrollAreaWidgetContents_6);
     other_Services_group_2->setObjectName(QString::fromUtf8("other_Services_group_2"));
+    other_Services_group_2->setFont(font2);
     other_Services_group_2->setFlat(true);
     other_Services_group_2->setCheckable(true);
-    other_Services_group_2->setChecked(false);
+    other_Services_group_2->setChecked(true);
     gridLayout_28 = new QGridLayout(other_Services_group_2);
     gridLayout_28->setSpacing(6);
     gridLayout_28->setMargin(11);
     gridLayout_28->setObjectName(QString::fromUtf8("gridLayout_28"));
     checkBox_133 = new QCheckBox(other_Services_group_2);
     checkBox_133->setObjectName(QString::fromUtf8("checkBox_133"));
+    checkBox_133->setChecked(true);
 
     gridLayout_28->addWidget(checkBox_133, 0, 0, 1, 1);
 
@@ -1484,6 +1535,7 @@ public:
 
     checkBox_136 = new QCheckBox(other_Services_group_2);
     checkBox_136->setObjectName(QString::fromUtf8("checkBox_136"));
+    checkBox_136->setChecked(true);
 
     gridLayout_28->addWidget(checkBox_136, 6, 0, 1, 1);
 
@@ -1492,15 +1544,17 @@ public:
 
     other_Tasks_group_2 = new QGroupBox(scrollAreaWidgetContents_6);
     other_Tasks_group_2->setObjectName(QString::fromUtf8("other_Tasks_group_2"));
+    other_Tasks_group_2->setFont(font2);
     other_Tasks_group_2->setFlat(true);
     other_Tasks_group_2->setCheckable(true);
-    other_Tasks_group_2->setChecked(false);
+    other_Tasks_group_2->setChecked(true);
     gridLayout_29 = new QGridLayout(other_Tasks_group_2);
     gridLayout_29->setSpacing(6);
     gridLayout_29->setMargin(11);
     gridLayout_29->setObjectName(QString::fromUtf8("gridLayout_29"));
     checkBox_137 = new QCheckBox(other_Tasks_group_2);
     checkBox_137->setObjectName(QString::fromUtf8("checkBox_137"));
+    checkBox_137->setChecked(true);
 
     gridLayout_29->addWidget(checkBox_137, 0, 0, 1, 1);
 
@@ -1516,6 +1570,7 @@ public:
 
     checkBox_140 = new QCheckBox(other_Tasks_group_2);
     checkBox_140->setObjectName(QString::fromUtf8("checkBox_140"));
+    checkBox_140->setChecked(true);
 
     gridLayout_29->addWidget(checkBox_140, 3, 0, 1, 1);
 
@@ -1524,25 +1579,29 @@ public:
 
     other_CommonPersistenceMechanisms_group_2 = new QGroupBox(scrollAreaWidgetContents_6);
     other_CommonPersistenceMechanisms_group_2->setObjectName(QString::fromUtf8("other_CommonPersistenceMechanisms_group_2"));
+    other_CommonPersistenceMechanisms_group_2->setFont(font2);
     other_CommonPersistenceMechanisms_group_2->setFlat(true);
     other_CommonPersistenceMechanisms_group_2->setCheckable(true);
-    other_CommonPersistenceMechanisms_group_2->setChecked(false);
+    other_CommonPersistenceMechanisms_group_2->setChecked(true);
     gridLayout_30 = new QGridLayout(other_CommonPersistenceMechanisms_group_2);
     gridLayout_30->setSpacing(6);
     gridLayout_30->setMargin(11);
     gridLayout_30->setObjectName(QString::fromUtf8("gridLayout_30"));
     checkBox_141 = new QCheckBox(other_CommonPersistenceMechanisms_group_2);
     checkBox_141->setObjectName(QString::fromUtf8("checkBox_141"));
+    checkBox_141->setChecked(true);
 
     gridLayout_30->addWidget(checkBox_141, 0, 0, 1, 1);
 
     checkBox_142 = new QCheckBox(other_CommonPersistenceMechanisms_group_2);
     checkBox_142->setObjectName(QString::fromUtf8("checkBox_142"));
+    checkBox_142->setChecked(true);
 
     gridLayout_30->addWidget(checkBox_142, 1, 0, 1, 1);
 
     checkBox_143 = new QCheckBox(other_CommonPersistenceMechanisms_group_2);
     checkBox_143->setObjectName(QString::fromUtf8("checkBox_143"));
+    checkBox_143->setChecked(true);
 
     gridLayout_30->addWidget(checkBox_143, 2, 0, 1, 1);
 
@@ -1553,16 +1612,19 @@ public:
 
     checkBox_145 = new QCheckBox(other_CommonPersistenceMechanisms_group_2);
     checkBox_145->setObjectName(QString::fromUtf8("checkBox_145"));
+    checkBox_145->setChecked(true);
 
     gridLayout_30->addWidget(checkBox_145, 5, 0, 1, 1);
 
     checkBox_146 = new QCheckBox(other_CommonPersistenceMechanisms_group_2);
     checkBox_146->setObjectName(QString::fromUtf8("checkBox_146"));
+    checkBox_146->setChecked(true);
 
     gridLayout_30->addWidget(checkBox_146, 4, 0, 1, 1);
 
     checkBox_147 = new QCheckBox(other_CommonPersistenceMechanisms_group_2);
     checkBox_147->setObjectName(QString::fromUtf8("checkBox_147"));
+    checkBox_147->setChecked(true);
 
     gridLayout_30->addWidget(checkBox_147, 6, 0, 1, 1);
 
@@ -1579,9 +1641,9 @@ public:
     gridLayout_26->addWidget(scrollArea_6, 0, 0, 1, 1);
 
     tab_hand_mode_widget_2->addTab(tab_other_2, QString());
-    close_handmode_menu_btn_2 = new QPushButton(frame_handmode_menu_2);
-    close_handmode_menu_btn_2->setObjectName(QString::fromUtf8("close_handmode_menu_btn_2"));
-    close_handmode_menu_btn_2->setGeometry(QRect(590, 0, 20, 16));
+    close_standard_menu_btn = new QPushButton(frame_handmode_menu_2);
+    close_standard_menu_btn->setObjectName(QString::fromUtf8("close_standard_menu_btn"));
+    close_standard_menu_btn->setGeometry(QRect(590, 0, 20, 16));
     next_btn_handmode_2 = new QPushButton(frame_handmode_menu_2);
     next_btn_handmode_2->setObjectName(QString::fromUtf8("next_btn_handmode_2"));
     next_btn_handmode_2->setGeometry(QRect(470, 520, 111, 41));
@@ -1592,7 +1654,12 @@ public:
     back_btn_handmode_2 = new QPushButton(frame_handmode_menu_2);
     back_btn_handmode_2->setObjectName(QString::fromUtf8("back_btn_handmode_2"));
     back_btn_handmode_2->setGeometry(QRect(370, 520, 91, 41));
-    stackedWidget->addWidget(page_3);
+    start_btn_handmode_2->raise();
+    tab_hand_mode_widget_2->raise();
+    close_standard_menu_btn->raise();
+    next_btn_handmode_2->raise();
+    back_btn_handmode_2->raise();
+    stackedWidget->addWidget(page_standard_uet);
     label_folder_path = new QLabel(centralWidget);
     label_folder_path->setObjectName(QString::fromUtf8("label_folder_path"));
     label_folder_path->setGeometry(QRect(390, 530, 341, 41));
@@ -1604,20 +1671,13 @@ public:
     label_folder_path->setFont(font5);
     label_folder_path->setAcceptDrops(false);
     label_folder_path->setWordWrap(true);
-    label = new QLabel(centralWidget);
-    label->setObjectName(QString::fromUtf8("label"));
-    label->setGeometry(QRect(40, 20, 281, 91));
-    QFont font6;
-    font6.setPointSize(9);
-    label->setFont(font6);
-    label->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
-    label->setWordWrap(true);
     BlackLine->setCentralWidget(centralWidget);
 
     retranslateUi(BlackLine);
 
+    stackedWidget->setCurrentIndex(2);
     tab_hand_mode_widget->setCurrentIndex(0);
-    tab_hand_mode_widget_2->setCurrentIndex(0);
+    tab_hand_mode_widget_2->setCurrentIndex(4);
 
 
     QMetaObject::connectSlotsByName(BlackLine);
@@ -1643,7 +1703,7 @@ public:
     label_outpu_info->setText(QString());
     cancel_btn->setText(QApplication::translate("BlackLine", "H\341\273\247y", 0, QApplication::UnicodeUTF8));
     finish_btn->setText(QApplication::translate("BlackLine", "Ho\303\240n t\341\272\245t", 0, QApplication::UnicodeUTF8));
-    pushButton->setText(QApplication::translate("BlackLine", "Thu th\341\272\255p ti\303\252u chu\341\272\251n", 0, QApplication::UnicodeUTF8));
+    standardModeBtn->setText(QApplication::translate("BlackLine", "Thu th\341\272\255p ti\303\252u chu\341\272\251n", 0, QApplication::UnicodeUTF8));
     next_btn_automode->setText(QApplication::translate("BlackLine", "Ti\341\272\277p theo >>", 0, QApplication::UnicodeUTF8));
     ram_checkbox_automode->setText(QApplication::translate("BlackLine", "Sao l\306\260u b\341\273\231 nh\341\273\233 RAM", 0, QApplication::UnicodeUTF8));
     close_automode_menu_btn->setText(QApplication::translate("BlackLine", "x", 0, QApplication::UnicodeUTF8));
@@ -1755,18 +1815,18 @@ public:
     start_btn_handmode->setText(QApplication::translate("BlackLine", "B\341\272\257t \304\221\341\272\247u thu th\341\272\255p", 0, QApplication::UnicodeUTF8));
     back_btn_handmode->setText(QApplication::translate("BlackLine", "<< Quay l\341\272\241i", 0, QApplication::UnicodeUTF8));
     memory_ProcessListing_group_2->setTitle(QApplication::translate("BlackLine", "Process Listing", 0, QApplication::UnicodeUTF8));
-    checkBox_17->setText(QApplication::translate("BlackLine", "Handles", 0, QApplication::UnicodeUTF8));
-    checkBox_18->setText(QApplication::translate("BlackLine", "Sections", 0, QApplication::UnicodeUTF8));
-    checkBox_19->setText(QApplication::translate("BlackLine", "Imports", 0, QApplication::UnicodeUTF8));
-    checkBox_20->setText(QApplication::translate("BlackLine", "Exports", 0, QApplication::UnicodeUTF8));
+    checkBox_90->setText(QApplication::translate("BlackLine", "MemD5", 0, QApplication::UnicodeUTF8));
     checkBox_21->setText(QApplication::translate("BlackLine", "MD5", 0, QApplication::UnicodeUTF8));
     checkBox_22->setText(QApplication::translate("BlackLine", "SHA256", 0, QApplication::UnicodeUTF8));
+    checkBox_18->setText(QApplication::translate("BlackLine", "Sections", 0, QApplication::UnicodeUTF8));
     checkBox_46->setText(QApplication::translate("BlackLine", "Ports", 0, QApplication::UnicodeUTF8));
-    checkBox_55->setText(QApplication::translate("BlackLine", "Strings", 0, QApplication::UnicodeUTF8));
     checkBox_56->setText(QApplication::translate("BlackLine", "Verify Digital Signatures", 0, QApplication::UnicodeUTF8));
-    checkBox_57->setText(QApplication::translate("BlackLine", "Exports", 0, QApplication::UnicodeUTF8));
-    checkBox_58->setText(QApplication::translate("BlackLine", "MD5", 0, QApplication::UnicodeUTF8));
-    checkBox_90->setText(QApplication::translate("BlackLine", "SHA256", 0, QApplication::UnicodeUTF8));
+    checkBox_58->setText(QApplication::translate("BlackLine", "SHA1", 0, QApplication::UnicodeUTF8));
+    checkBox_19->setText(QApplication::translate("BlackLine", "Imports", 0, QApplication::UnicodeUTF8));
+    checkBox_55->setText(QApplication::translate("BlackLine", "Strings", 0, QApplication::UnicodeUTF8));
+    checkBox_17->setText(QApplication::translate("BlackLine", "Handles", 0, QApplication::UnicodeUTF8));
+    checkBox_149->setText(QApplication::translate("BlackLine", "Detect Injected Sections", 0, QApplication::UnicodeUTF8));
+    checkBox_20->setText(QApplication::translate("BlackLine", "Exports", 0, QApplication::UnicodeUTF8));
     memory_DriversEnumeration_group_2->setTitle(QApplication::translate("BlackLine", "Drivers Enumeration", 0, QApplication::UnicodeUTF8));
     checkBox_24->setText(QApplication::translate("BlackLine", "Imports", 0, QApplication::UnicodeUTF8));
     checkBox_25->setText(QApplication::translate("BlackLine", "Exports", 0, QApplication::UnicodeUTF8));
@@ -1845,12 +1905,11 @@ public:
     checkBox_147->setText(QApplication::translate("BlackLine", "Get VersionInfo", 0, QApplication::UnicodeUTF8));
     checkBox_148->setText(QApplication::translate("BlackLine", "SHA1", 0, QApplication::UnicodeUTF8));
     tab_hand_mode_widget_2->setTabText(tab_hand_mode_widget_2->indexOf(tab_other_2), QApplication::translate("BlackLine", "Other", 0, QApplication::UnicodeUTF8));
-    close_handmode_menu_btn_2->setText(QApplication::translate("BlackLine", "x", 0, QApplication::UnicodeUTF8));
+    close_standard_menu_btn->setText(QApplication::translate("BlackLine", "x", 0, QApplication::UnicodeUTF8));
     next_btn_handmode_2->setText(QApplication::translate("BlackLine", "Ti\341\272\277p theo >>", 0, QApplication::UnicodeUTF8));
     start_btn_handmode_2->setText(QApplication::translate("BlackLine", "B\341\272\257t \304\221\341\272\247u thu th\341\272\255p", 0, QApplication::UnicodeUTF8));
     back_btn_handmode_2->setText(QApplication::translate("BlackLine", "<< Quay l\341\272\241i", 0, QApplication::UnicodeUTF8));
     label_folder_path->setText(QString());
-    label->setText(QApplication::translate("BlackLine", "B\341\273\231 c\303\264ng c\341\273\245 thu th\341\272\255p d\341\273\257 li\341\273\207u t\306\260\306\241i d\341\273\261a tr\303\252n REDLINE", 0, QApplication::UnicodeUTF8));
     Q_UNUSED(BlackLine);
     } // retranslateUi
 

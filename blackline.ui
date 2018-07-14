@@ -85,9 +85,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>180</y>
+      <y>30</y>
       <width>331</width>
-      <height>101</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
@@ -119,9 +119,9 @@ Thời gian trung bình khoảng 20p có thể lâu hơn tùy hệ thống</stri
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>460</y>
+      <y>360</y>
       <width>331</width>
-      <height>101</height>
+      <height>221</height>
      </rect>
     </property>
     <property name="font">
@@ -231,13 +231,13 @@ Thời gian trung bình khoảng 20p có thể lâu hơn tùy hệ thống</stri
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="standardModeBtn">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>320</y>
+      <y>170</y>
       <width>331</width>
-      <height>101</height>
+      <height>161</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -266,11 +266,14 @@ Thời gian trung bình khoảng 20p có thể lâu hơn tùy hệ thống</stri
      <rect>
       <x>370</x>
       <y>10</y>
-      <width>611</width>
-      <height>561</height>
+      <width>621</width>
+      <height>581</height>
      </rect>
     </property>
-    <widget class="QWidget" name="page">
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="page_automode">
      <widget class="QFrame" name="frame_automode_menu">
       <property name="geometry">
        <rect>
@@ -292,7 +295,7 @@ Thời gian trung bình khoảng 20p có thể lâu hơn tùy hệ thống</stri
       <widget class="QPushButton" name="next_btn_automode">
        <property name="geometry">
         <rect>
-         <x>470</x>
+         <x>480</x>
          <y>520</y>
          <width>111</width>
          <height>41</height>
@@ -338,7 +341,7 @@ Thời gian trung bình khoảng 20p có thể lâu hơn tùy hệ thống</stri
       <widget class="QPushButton" name="back_btn_automode">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>380</x>
          <y>520</y>
          <width>91</width>
          <height>41</height>
@@ -351,7 +354,7 @@ Thời gian trung bình khoảng 20p có thể lâu hơn tùy hệ thống</stri
       <widget class="QPushButton" name="start_btn_automode">
        <property name="geometry">
         <rect>
-         <x>470</x>
+         <x>480</x>
          <y>520</y>
          <width>111</width>
          <height>41</height>
@@ -395,7 +398,7 @@ p, li { white-space: pre-wrap; }
       <zorder>next_btn_automode</zorder>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_2">
+    <widget class="QWidget" name="page_handmode">
      <widget class="QFrame" name="frame_handmode_menu">
       <property name="geometry">
        <rect>
@@ -1081,7 +1084,7 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>532</width>
+              <width>352</width>
               <height>635</height>
              </rect>
             </property>
@@ -1286,7 +1289,7 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>532</width>
+              <width>391</width>
               <height>805</height>
              </rect>
             </property>
@@ -1526,7 +1529,7 @@ p, li { white-space: pre-wrap; }
       <zorder>back_btn_handmode</zorder>
      </widget>
     </widget>
-    <widget class="QWidget" name="page_3">
+    <widget class="QWidget" name="page_standard_uet">
      <widget class="QFrame" name="frame_handmode_menu_2">
       <property name="geometry">
        <rect>
@@ -1563,7 +1566,7 @@ p, li { white-space: pre-wrap; }
         <bool>true</bool>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>4</number>
        </property>
        <widget class="QWidget" name="tab_memory_2">
         <attribute name="title">
@@ -1607,48 +1610,40 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_19">
-                <item row="0" column="0">
-                 <widget class="QCheckBox" name="checkBox_17">
+                <item row="13" column="0">
+                 <widget class="QCheckBox" name="checkBox_90">
                   <property name="text">
-                   <string>Handles</string>
+                   <string>MemD5</string>
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
-                 <widget class="QCheckBox" name="checkBox_18">
-                  <property name="text">
-                   <string>Sections</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="0">
-                 <widget class="QCheckBox" name="checkBox_19">
-                  <property name="text">
-                   <string>Imports</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="0">
-                 <widget class="QCheckBox" name="checkBox_20">
-                  <property name="text">
-                   <string>Exports</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="4" column="0">
+                <item row="12" column="0">
                  <widget class="QCheckBox" name="checkBox_21">
                   <property name="text">
                    <string>MD5</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
-                <item row="5" column="0">
+                <item row="10" column="0">
                  <widget class="QCheckBox" name="checkBox_22">
                   <property name="text">
                    <string>SHA256</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QCheckBox" name="checkBox_18">
+                  <property name="text">
+                   <string>Sections</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1657,40 +1652,75 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Ports</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
-                <item row="7" column="0">
+                <item row="4" column="0">
+                 <widget class="QCheckBox" name="checkBox_56">
+                  <property name="text">
+                   <string>Verify Digital Signatures</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QCheckBox" name="checkBox_58">
+                  <property name="text">
+                   <string>SHA1</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QCheckBox" name="checkBox_19">
+                  <property name="text">
+                   <string>Imports</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
                  <widget class="QCheckBox" name="checkBox_55">
                   <property name="text">
                    <string>Strings</string>
                   </property>
                  </widget>
                 </item>
-                <item row="8" column="0">
-                 <widget class="QCheckBox" name="checkBox_56">
+                <item row="7" column="0">
+                 <widget class="QCheckBox" name="checkBox_17">
                   <property name="text">
-                   <string>Verify Digital Signatures</string>
+                   <string>Handles</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                  <property name="tristate">
+                   <bool>false</bool>
                   </property>
                  </widget>
                 </item>
                 <item row="9" column="0">
-                 <widget class="QCheckBox" name="checkBox_57">
+                 <widget class="QCheckBox" name="checkBox_149">
                   <property name="text">
-                   <string>Exports</string>
+                   <string>Detect Injected Sections</string>
                   </property>
-                 </widget>
-                </item>
-                <item row="10" column="0">
-                 <widget class="QCheckBox" name="checkBox_58">
-                  <property name="text">
-                   <string>MD5</string>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
                 <item row="11" column="0">
-                 <widget class="QCheckBox" name="checkBox_90">
+                 <widget class="QCheckBox" name="checkBox_20">
                   <property name="text">
-                   <string>SHA256</string>
+                   <string>Exports</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1716,13 +1746,16 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_20">
                 <item row="0" column="0">
                  <widget class="QCheckBox" name="checkBox_24">
                   <property name="text">
                    <string>Imports</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1731,12 +1764,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Exports</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="0">
                  <widget class="QCheckBox" name="checkBox_26">
                   <property name="text">
                    <string>MD5</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1751,6 +1790,9 @@ p, li { white-space: pre-wrap; }
                  <widget class="QCheckBox" name="checkBox_28">
                   <property name="text">
                    <string>Verifi Digital Signatures</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1804,13 +1846,16 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_21">
                 <item row="0" column="0">
                  <widget class="QCheckBox" name="checkBox_100">
                   <property name="text">
                    <string>IDT</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1819,12 +1864,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>SSDT Inline</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="0">
                  <widget class="QCheckBox" name="checkBox_102">
                   <property name="text">
                    <string>Verifi Digital Signatures</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1833,12 +1884,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>SSDT Index</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="4" column="0">
                  <widget class="QCheckBox" name="checkBox_91">
                   <property name="text">
                    <string>Drivers</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -1884,12 +1941,12 @@ p, li { white-space: pre-wrap; }
           <bool>true</bool>
          </property>
          <property name="checked">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <widget class="QCheckBox" name="checkBox_92">
           <property name="geometry">
            <rect>
-            <x>20</x>
+            <x>10</x>
             <y>30</y>
             <width>242</width>
             <height>23</height>
@@ -1898,11 +1955,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Machinde and OS Infomation</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_93">
           <property name="geometry">
            <rect>
-            <x>20</x>
+            <x>10</x>
             <y>60</y>
             <width>260</width>
             <height>23</height>
@@ -1911,11 +1971,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Analyze System Restore Points</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_94">
           <property name="geometry">
            <rect>
-            <x>20</x>
+            <x>10</x>
             <y>90</y>
             <width>228</width>
             <height>23</height>
@@ -1924,11 +1987,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Registry Hive Enumeration</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_95">
           <property name="geometry">
            <rect>
-            <x>20</x>
+            <x>10</x>
             <y>120</y>
             <width>134</width>
             <height>23</height>
@@ -1937,11 +2003,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>User Accounts</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_104">
           <property name="geometry">
            <rect>
-            <x>20</x>
+            <x>10</x>
             <y>150</y>
             <width>155</width>
             <height>23</height>
@@ -1949,6 +2018,9 @@ p, li { white-space: pre-wrap; }
           </property>
           <property name="text">
            <string>Analyze Prefetch</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
           </property>
          </widget>
         </widget>
@@ -1971,6 +2043,9 @@ p, li { white-space: pre-wrap; }
          <property name="text">
           <string>Event Logs</string>
          </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
         </widget>
         <widget class="QCheckBox" name="system_RegistryEnumeration_group_2">
          <property name="geometry">
@@ -1990,6 +2065,9 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="text">
           <string>Registry Enumeration</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
          </property>
         </widget>
        </widget>
@@ -2019,6 +2097,9 @@ p, li { white-space: pre-wrap; }
          <property name="text">
           <string>Port Enumeration</string>
          </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
         </widget>
         <widget class="QCheckBox" name="checkBox_106">
          <property name="geometry">
@@ -2038,6 +2119,9 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="text">
           <string>DNS Tables</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
          </property>
         </widget>
         <widget class="QCheckBox" name="checkBox_107">
@@ -2059,6 +2143,9 @@ p, li { white-space: pre-wrap; }
          <property name="text">
           <string>ARP Tables</string>
          </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
         </widget>
         <widget class="QCheckBox" name="checkBox_108">
          <property name="geometry">
@@ -2078,6 +2165,9 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="text">
           <string>Routing Tables</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
          </property>
         </widget>
         <widget class="QGroupBox" name="network_BrowserHistory_group_2">
@@ -2106,12 +2196,12 @@ p, li { white-space: pre-wrap; }
           <bool>true</bool>
          </property>
          <property name="checked">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
          <widget class="QCheckBox" name="checkBox_109">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>20</x>
             <y>30</y>
             <width>82</width>
             <height>21</height>
@@ -2120,11 +2210,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Cookies</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_110">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>20</x>
             <y>60</y>
             <width>111</width>
             <height>21</height>
@@ -2133,11 +2226,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Form History</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_111">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>20</x>
             <y>90</y>
             <width>191</width>
             <height>21</height>
@@ -2146,11 +2242,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>Thumbnails (Firefox Only)</string>
           </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_112">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>20</x>
             <y>120</y>
             <width>121</width>
             <height>21</height>
@@ -2159,11 +2258,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>File Downloads</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_113">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>20</x>
             <y>150</y>
             <width>161</width>
             <height>21</height>
@@ -2172,11 +2274,14 @@ p, li { white-space: pre-wrap; }
           <property name="text">
            <string>URL History</string>
           </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
          </widget>
          <widget class="QCheckBox" name="checkBox_114">
           <property name="geometry">
            <rect>
-            <x>30</x>
+            <x>20</x>
             <y>180</y>
             <width>241</width>
             <height>21</height>
@@ -2211,7 +2316,7 @@ p, li { white-space: pre-wrap; }
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>0</y>
+              <y>-176</y>
               <width>532</width>
               <height>635</height>
              </rect>
@@ -2236,13 +2341,16 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_24">
                 <item row="0" column="0">
                  <widget class="QCheckBox" name="checkBox_115">
                   <property name="text">
                    <string>Include Active Files (Raw Only)</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2251,12 +2359,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Parse NTFS INDX Buffers (Raw Only)</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="0">
                  <widget class="QCheckBox" name="checkBox_117">
                   <property name="text">
                    <string>Analyze Entropy</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2265,12 +2379,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Enumerate Imports</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="4" column="0">
                  <widget class="QCheckBox" name="checkBox_119">
                   <property name="text">
                    <string>Verify Digital Signatures</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2279,12 +2399,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Include Directories</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="6" column="0">
                  <widget class="QCheckBox" name="checkBox_121">
                   <property name="text">
                    <string>Get Resources</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2293,12 +2419,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>MD5</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="8" column="0">
                  <widget class="QCheckBox" name="checkBox_123">
                   <property name="text">
                    <string>SHA256</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
                   </property>
                  </widget>
                 </item>
@@ -2307,6 +2439,9 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Include Deleted Files (Raw Only)</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="10" column="0">
@@ -2314,12 +2449,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Analyze File Anomalies</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="11" column="0">
                  <widget class="QCheckBox" name="checkBox_126">
                   <property name="text">
                    <string>Enumerate Exports</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2335,12 +2476,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Include Files</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="14" column="0">
                  <widget class="QCheckBox" name="checkBox_129">
                   <property name="text">
                    <string>Get Version Info</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2373,7 +2520,7 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_25">
                 <item row="0" column="0">
@@ -2381,12 +2528,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Disks</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="1" column="0">
                  <widget class="QCheckBox" name="checkBox_132">
                   <property name="text">
                    <string>Volumes</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2416,14 +2569,21 @@ p, li { white-space: pre-wrap; }
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>0</y>
+              <y>-156</y>
               <width>532</width>
-              <height>805</height>
+              <height>615</height>
              </rect>
             </property>
             <layout class="QGridLayout" name="gridLayout_27">
              <item row="0" column="0">
               <widget class="QGroupBox" name="other_Services_group_2">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="title">
                 <string>Services</string>
                </property>
@@ -2434,13 +2594,16 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_28">
                 <item row="0" column="0">
                  <widget class="QCheckBox" name="checkBox_133">
                   <property name="text">
                    <string>MD5</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2463,6 +2626,9 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Verify Digital Signatures</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                </layout>
@@ -2470,6 +2636,13 @@ p, li { white-space: pre-wrap; }
              </item>
              <item row="2" column="0">
               <widget class="QGroupBox" name="other_Tasks_group_2">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="title">
                 <string>Tasks</string>
                </property>
@@ -2480,13 +2653,16 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_29">
                 <item row="0" column="0">
                  <widget class="QCheckBox" name="checkBox_137">
                   <property name="text">
                    <string>MD5</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2509,6 +2685,9 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Verify Digital Signatures</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                </layout>
@@ -2516,6 +2695,13 @@ p, li { white-space: pre-wrap; }
              </item>
              <item row="3" column="0">
               <widget class="QGroupBox" name="other_CommonPersistenceMechanisms_group_2">
+               <property name="font">
+                <font>
+                 <pointsize>9</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
                <property name="title">
                 <string>Common Persistence Mechanisms</string>
                </property>
@@ -2526,13 +2712,16 @@ p, li { white-space: pre-wrap; }
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>false</bool>
+                <bool>true</bool>
                </property>
                <layout class="QGridLayout" name="gridLayout_30">
                 <item row="0" column="0">
                  <widget class="QCheckBox" name="checkBox_141">
                   <property name="text">
                    <string>Analyze Entropy</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2541,12 +2730,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Enumerate Imports</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="0">
                  <widget class="QCheckBox" name="checkBox_143">
                   <property name="text">
                    <string>MD5</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2562,6 +2757,9 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Enumerate Exports</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="4" column="0">
@@ -2569,12 +2767,18 @@ p, li { white-space: pre-wrap; }
                   <property name="text">
                    <string>Analyze File Anomalies</string>
                   </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="6" column="0">
                  <widget class="QCheckBox" name="checkBox_147">
                   <property name="text">
                    <string>Get VersionInfo</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -2595,7 +2799,7 @@ p, li { white-space: pre-wrap; }
         </layout>
        </widget>
       </widget>
-      <widget class="QPushButton" name="close_handmode_menu_btn_2">
+      <widget class="QPushButton" name="close_standard_menu_btn">
        <property name="geometry">
         <rect>
          <x>590</x>
@@ -2650,6 +2854,11 @@ p, li { white-space: pre-wrap; }
         <string>&lt;&lt; Quay lại</string>
        </property>
       </widget>
+      <zorder>start_btn_handmode_2</zorder>
+      <zorder>tab_hand_mode_widget_2</zorder>
+      <zorder>close_standard_menu_btn</zorder>
+      <zorder>next_btn_handmode_2</zorder>
+      <zorder>back_btn_handmode_2</zorder>
      </widget>
     </widget>
    </widget>
@@ -2675,30 +2884,6 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="wordWrap">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>281</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Bộ công cụ thu thập dữ liệu tươi dựa trên REDLINE</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
     </property>
     <property name="wordWrap">
      <bool>true</bool>

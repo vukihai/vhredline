@@ -25,6 +25,26 @@ void hide_AutoMode_Menu( Ui::BlackLine* ui){
     ui->label_folder_path->setVisible(false);
     ui->stackedWidget->setVisible(false);
 }
+//Mo ra cua so che do co ban cua UET
+void show_Standard_Menu(Ui::BlackLine *ui){
+    ui->label_folder_path->setVisible(true);
+    ui->next_btn_handmode_2->setVisible(true);
+    ui->tab_hand_mode_widget_2->setDisabled(false);
+    ui->back_btn_handmode_2->setVisible(false);
+    ui->start_btn_handmode_2->setVisible(false);
+    ui->stackedWidget->setVisible(true);
+    ui->standardModeBtn->setStyleSheet("background-color:red;color:white");
+    ui->stackedWidget->setCurrentIndex(2);
+    ui->label_folder_path->setText("Bam nut 'Tiep theo' de chon thu muc luu ket qua thu thap duoc");
+}
+
+//Dong cua so che do co ban cua UET
+void hide_Standard_Menu(Ui::BlackLine *ui){
+    ui->standardModeBtn->setStyleSheet("");
+    ui->label_folder_path->setVisible(false);
+    ui->stackedWidget->setVisible(false);
+}
+
 //Mo ra cua so che do thu cong
 void show_HandMode_Menu( Ui::BlackLine* ui){
     ui->label_folder_path->setVisible(true);
@@ -67,14 +87,6 @@ void hide_text_output(Ui::BlackLine *ui){
     ui->autoModeBtn->setDisabled(false);
     ui->handModeBtn->setDisabled(false);
 }
-////Lay ra cac check box trong tab
-//QList<QCheckBox *> get_checkbox_in_tab(QTabWidget *tab){
-//    return tab->findChildren<QCheckBox *>;
-//}
-////Lay ra cac GroupBox trong tab
-//QList<QCheckBox *> get_checkbox_in_tab(QTabWidget *tab){
-//    return tab->findChildren<QCheckBox *>;
-//}
 
 //Mo ra cua so chon folder
 QString BlackLine::choseFolder(){
@@ -84,16 +96,23 @@ QString BlackLine::choseFolder(){
                                                     | QFileDialog::DontResolveSymlinks);
     return dir;
 }
-//Constructor
+//constructor
 BlackLine::BlackLine(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::BlackLine)
 {
     ui->setupUi(this);
     hide_AutoMode_Menu(this->ui);
-    hide_HandMode_Menu(this->ui);
     hide_text_output(this->ui);
-
+    ui->centralWidget->setStyleSheet("\
+                                     QCheckBox:checked{\
+                                         color: green;\
+                                     }\
+                                     QGroupBoxQCheckBox:checked{  \
+                                         color:green; \
+                                     }  \
+                                     "
+);
     this->xagt = new QThread();
     xagt->start();
     this->runner = new RunningThread();
@@ -107,6 +126,7 @@ BlackLine::~BlackLine()
 //Bam vao nut Che do tu dong
 void BlackLine::on_autoModeBtn_clicked()
 {
+    hide_Standard_Menu(this->ui);
     hide_HandMode_Menu(this->ui);
     show_AutoMode_Menu(this->ui);
 }
@@ -116,10 +136,24 @@ void BlackLine::on_close_automode_menu_btn_clicked()
     hide_AutoMode_Menu(this->ui);
     this->ui->start_btn_handmode->setVisible(false);
 }
+//Bam  vao nut Che do tieu chuan
+void BlackLine::on_standardModeBtn_clicked()
+{
+    hide_AutoMode_Menu(this->ui);
+    hide_HandMode_Menu(this->ui);
+    show_Standard_Menu(this->ui);
+}
+//bam vao nut x trong che do tieu chuan
+void BlackLine::on_close_standard_menu_btn_clicked()
+{
+    hide_Standard_Menu(this->ui);
+    this->ui->start_btn_handmode_2->setVisible(false);
+}
 
 //Bam vao nut Che do thu cong
 void BlackLine::on_handModeBtn_clicked()
 {
+    hide_Standard_Menu(this->ui);
     hide_AutoMode_Menu(this->ui);
     show_HandMode_Menu(this->ui);
 }
@@ -270,6 +304,23 @@ void BlackLine::on_back_btn_automode_clicked()
     this->ui->next_btn_automode->setVisible(true);
     show_AutoMode_Menu(this->ui);
 }
+void BlackLine::on_back_btn_handmode_2_clicked()
+{
+    this->ui->start_btn_handmode_2->setVisible(false);
+    this->ui->next_btn_handmode_2->setVisible(true);
+    show_Standard_Menu(this->ui);
+}
+void BlackLine::on_next_btn_handmode_2_clicked()
+{
+    folderPath = choseFolder();
+    if(folderPath == "") return;
+    this->ui->tab_hand_mode_widget_2->setDisabled(true);
+    this->ui->start_btn_handmode_2->setVisible(true);
+    this->ui->next_btn_handmode_2->setVisible(false);
+    this->ui->label_folder_path->setVisible(true);
+    this->ui->back_btn_handmode_2->setVisible(true);
+    this->ui->label_folder_path->setText("Ket qua se duoc luu vao:  "+ folderPath);
+}
 
 void BlackLine::on_next_btn_automode_clicked()
 {
@@ -289,7 +340,7 @@ void BlackLine::on_finish_btn_clicked()
 }
 
 
-/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Ham nay thuc hien che do thu cong
 void BlackLine::on_start_btn_handmode_clicked()
 {
@@ -314,8 +365,6 @@ void BlackLine::on_start_btn_handmode_clicked()
     QString folder_To_Save = folderPath;
     //////////////////////////////////
 
-
-
     /*cau lenh duoi day dung de them text ra man hinh*/
 //    this->ui->label_outpu_info->setText("anything");
 
@@ -331,7 +380,7 @@ void BlackLine::on_start_btn_handmode_clicked()
 }
 
 
-////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Ham nay thuc hien che do tu dong
 void BlackLine::on_start_btn_automode_clicked()
 {
@@ -362,6 +411,43 @@ void BlackLine::on_start_btn_automode_clicked()
     /*hien thi nut hoan tat khi chay xong*/
     this->ui->finish_btn->setDisabled(false);
 }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Ham nay thuc hien che do thu thap tuy chinh
+void BlackLine::on_start_btn_handmode_2_clicked()
+{
+    open_text_output(this->ui);
+    //debug
+    QString memory = print_data_checkbox(this->ui->tab_memory_2);
+    QString disk = print_data_checkbox(this->ui->tab_disk_2);
+    QString network = print_data_checkbox(this->ui->tab_network_2);
+    QString other = print_data_checkbox(this->ui->tab_other_2);
+    QString system = print_data_checkbox(this->ui->tab_system_2);
+    QFile file("fileCheckbox.txt");
+    if(file.open(QFile::Text |QFile::WriteOnly)){
+        QTextStream output(&file);
+        output<<memory<<endl;
+        output<<network<<endl;
+        output<<disk<<endl;
+        output<<other<<endl;
+        output<<disk<<endl;
+    }
+    file.flush();
+    file.close();
+    QString folder_To_Save = folderPath;
+    //////////////////////////////////
+
+    /*cau lenh duoi day dung de them text ra man hinh*/
+//    this->ui->label_outpu_info->setText("anything");
+
+    /*cau lenh duoi day dung de hien thi % (0->100) tren processBar*/
+//    this->ui->progressBar->setValue(100);
+
+
+
+    //////////////////////////////////
+    /*hien thi nut hoan tat khi chay xong*/
+    this->ui->finish_btn->setDisabled(false);
+}
 
 
 // Ham nay duoc goi khi dang thu thap thong tin nhung nguoi dung bam nut huy
@@ -383,7 +469,5 @@ void BlackLine::on_cancel_btn_clicked()
 
 //}
 
-void BlackLine::on_pushButton_clicked()
-{
 
-}
+

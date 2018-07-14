@@ -72,6 +72,8 @@ private slots:
 
     void on_back_btn_handmode_2_clicked();
 
+    void on_start_btn_handmode_2_clicked();
+
 private:
     Ui::BlackLine *ui;
     QString folderPath;
